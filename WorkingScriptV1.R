@@ -2,6 +2,7 @@
 
 # Read in Data
 
-JClass <- read.csv('Journals Classification.csv', header = T)
-
+JClass <- read.csv('JournalsClassification.csv', header = T)
 head (JClass)
+
+# Tyler - load in main spreadsheet after you've data cleaned and see if it will read in ok
