@@ -51,7 +51,8 @@ for (N in 1:NROW(ESA2017)){
 # think about what the data types are, and how one section of the data will need 'relabelling'
 # relabel certain parts of the data as appropriate
 # have a go at some form of statistical analysis
-View(ESA2017)
 
-
+  ESA2017[ESA2017 == "N"] <- FALSE
+  ESA2017[ESA2017 == "Y"] <- TRUE
+  
 
