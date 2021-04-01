@@ -54,5 +54,8 @@ for (N in 1:NROW(ESA2017)){
 
   ESA2017[ESA2017 == "N"] <- FALSE
   ESA2017[ESA2017 == "Y"] <- TRUE
-  
-
+ GenbioTotal <- sum(ESA2017$GenBio == TRUE, na.rm = TRUE)
+ EEIDSpecTotal <- sum(ESA2017$EEIDSpec == TRUE, na.rm = TRUE)
+ EcoSpecTotal <- sum(ESA2017$EcoSpec == TRUE, na.rm = TRUE)
+ if (ESA2017$EEIDSession == "YES") GenBioEEID <- {sum(ESA2017$GenBio == TRUE, na.rm = TRUE)}
+ 
