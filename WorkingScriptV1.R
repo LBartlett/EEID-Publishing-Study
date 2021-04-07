@@ -2,11 +2,11 @@
 
 # Read in Data
 
-JClass <- read.csv('JournalsClassification.csv', header = T)
+JClass <- read.csv('JournalsClassification.csv', header = T, stringsAsFactors = F)
 head (JClass)
 sum(is.na(JClass))
 
-DataRaw <- read.csv('MainDataESA2017.csv', header = T)
+DataRaw <- read.csv('MainDataESA2017.csv', header = T, stringsAsFactors = F)
 head(DataRaw)
 
 # Assemble a new data frame for analysis
