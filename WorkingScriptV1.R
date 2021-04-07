@@ -66,7 +66,7 @@ EcoSpecTotal <- sum(ESA2017$EcoSpec, na.rm = TRUE)
 GenBioEEID <- sum(ESA2017$GenBio[which(ESA2017$EEIDSession == "YES")], na.rm = TRUE)
 EEIDSpecEEID <- sum(ESA2017$EEIDSpec[which(ESA2017$EEIDSession == "YES")], na.rm = TRUE)
 EcoSpecEEID <- sum(ESA2017$EcoSpec[which(ESA2017$EEIDSession == "YES")], na.rm = TRUE)
-
+ 
 
 # Run a binomial GLM looking at whether being published in an ecology-specific journal is predicted in part by being presented at an EEID session or not.
 EcoModel1 <- glm(formula = EcoSpec ~ EEIDSession,
@@ -80,5 +80,25 @@ summary(EcoModel1)
 # get the p-value from a Chi-Squared anova (don't look at the p-values in the summary :) )
 anova(EcoModel1, test = 'Chisq')
 
+EcoModel2 <- glm(formula = EEIDSpec ~ EEIDSession,
+                 family = 'binomial',
+                 data = na.omit(ESA2017))
+summary(EcoModel2)
+anova(EcoModel2, test = 'Chisq')
 
+EcoModel3 <- glm(formula = GenBio ~ EEIDSession,
+                 family = 'binomial',
+                 data = na.omit(ESA2017))
+summary(EcoModel3)
+anova(EcoModel3, test = 'Chisq')
 
+ESA2017[ESA2017 == "NO"] <- FALSE
+ESA2017[ESA2017 == "YES"] <- TRUE
+ESA2017$Located <- as.logical(ESA2017$Located)
+ESA2017$EEIDSession <- as.logical(ESA2017$EEIDSession)
+
+EcoModel4 <- glm(formula = Located ~ EEIDSession,
+                 family = 'binomial',
+                 data = ESA2017)
+summary(EcoModel4)
+anova(EcoModel4, test = 'Chisq')
