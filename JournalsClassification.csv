@@ -1,4 +1,4 @@
-Journal,EcologySpecific,GeneralBiology,EEIDSpecific
+Journal,EcologySpecific,GeneralBiology,IDSpecific
 Acta Oecologia,Y,N,N
 Acta Tropica,N,N,Y
 Agroforestry Systems,N,N,N
@@ -7,23 +7,37 @@ Avian Conservation and Ecology,Y,N,N
 bioRxiv,NA,NA,NA
 BioScience,N,Y,N
 BMC Public Health,N,N,Y
+Botany,N,N,N
+Canadian Journal of Forest Research,N,N,N
+Climate of the Past,N,N,N
 Conservation Letters,Y,N,N
+Ecography,Y,N,N
+EcoHealth,Y,N,Y
 Ecological Indicators,Y,N,N
+Ecological Monographs,Y,N,N
 Ecology,Y,N,N
 Ecology and Evolution,Y,N,N
 Ecology Letters,Y,N,N
 Ecosphere,Y,N,N
 Ecosystems,Y,N,N
+Earth Surface Processes and Landforms,N,N,N
 Emerging Infectious Diseases,N,N,Y
 Environmental Microbiology,N,N,N
 Environmental Pollution,N,N,N
+Epidemics,N,N,Y
 European Journal of Forest Research,N,N,N
 Eurosurveillance,N,N,Y
+Evolution,N,N,N
+Evolutionary Applications,N,N,N
 Forest Ecology and Management,Y,N,N
 Forest Science,Y,N,N
 Functional Ecology,Y,N,N
 Global Change Biology,Y,N,N
+Global Ecology and Biogeography,Y,N,N
+Hydrobiologia,Y,N,N
 Insect Systematics and Diversity,N,N,N
+International Journal of Environmental Analytical Chemistry,N,N,N
+International Journal of Infectious Diseases,N,N,Y
 International Journal of Wildland Fire,N,N,N
 Journal of Animal Ecology,Y,N,N
 Journal of Applied Ecology,Y,N,N
@@ -31,11 +45,15 @@ Journal of Biogeography,Y,N,N
 Journal of Ecology,Y,N,N
 Journal of Environmental Studies and Sciences,N,N,N
 Journal of Evolutionary Biology,N,N,N
+Journal of Medical Entomology,N,N,Y
 Journal of Rural Studies,N,N,N
 Journal of the Royal Society Interface,N,Y,N
+Journal of Vegetation Science,N,N,N
 Journal of Zoo and Wildlife Medicine,N,N,Y
 Lake and Resevoir Management,N,N,N
 Landscape Ecology,Y,N,N
+mBio,N,N,N
+Methods in Ecology and Evolution,Y,N,N
 Molecular Ecology,Y,N,N
 Nature Climate Change,N,N,N
 Nature Communications,N,Y,N
@@ -43,15 +61,18 @@ Nature Ecology and Evolution,Y,N,N
 New Phytologist,N,N,N
 Oecologia,Y,N,N
 OIKOS,Y,N,N
+Pacific Conservation Biology,Y,N,N
 Parasites and Vectors,N,N,Y
 Philosophical Transactions of the Royal Society B,N,Y,N
 Physiology and Behavior,N,N,N
+Plant Soil,N,N,N
 PLoS Computational Biology,N,Y,N
 PLoS Neglected Tropical Diseases,N,N,Y
 PLoS ONE,N,Y,N
 PNAS,N,Y,N
 Proceedings of the Royal Society B,N,Y,N
 Royal Society Open Science,N,Y,N
+Science,N,Y,N
 Science of the Total Environment,N,N,N
 Scientific Reports,N,Y,N
 Sustainability,N,N,N
@@ -59,3 +80,5 @@ The American Journal of Tropical Medicine and Hygiene,N,N,Y
 The American Naturalist,Y,N,N
 The ISME Journal,Y,N,N
 Theoretical Ecology,Y,N,N
+Trends in Parasitology,N,N,Y
+Veterinary Pathology,N,N,Y

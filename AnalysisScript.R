@@ -1,15 +1,18 @@
-### Working Script for EEID Publishing Project
+### Collaborative project w/ Tyler Washburn & Lewis Bartlett
 
-# Read in Data
+## Contact lewis.bartlett@uga.edu / https://scholar.google.com/citations?user=PV5ca5UAAAAJ&hl
+
+###############
+
+#Read in Data
 
 JClass <- read.csv('JournalsClassification.csv', header = T, stringsAsFactors = FALSE)
 head (JClass)
 sum(is.na(JClass))
 
-DataRaw <- read.csv('MainDataESABoth.csv', header = T, stringsAsFactors = FALSE)
+DataRaw <- read.csv('MainData.csv', header = T, stringsAsFactors = FALSE)
 
 head(DataRaw)
-
 
 # Assemble a new data frame for analysis
 
@@ -77,17 +80,23 @@ summary(EcoModel1)
 # get the p-value from a Chi-Squared anova (don't look at the p-values in the summary :) )
 anova(EcoModel1, test = 'Chisq')
 
+# ID sessions singificantly less likely to assocociated with pubs in ecology journals
+
 EcoModel2 <- glm(formula = IDSpec ~ EEIDSession,
                  family = 'binomial',
                  data = na.omit(ESAData))
 summary(EcoModel2)
 anova(EcoModel2, test = 'Chisq')
 
+# unsurprisingly, more likely to be associated with ID-journals
+
 EcoModel3 <- glm(formula = GenBio ~ EEIDSession,
                  family = 'binomial',
                  data = na.omit(ESAData))
 summary(EcoModel3)
 anova(EcoModel3, test = 'Chisq')
+
+# Significantly more likely than their other ecology session counterparts to be published in general bio journals
 
 ESAData[ESAData == "NO"] <- FALSE
 ESAData[ESAData == "YES"] <- TRUE
@@ -100,10 +109,37 @@ EcoModel4 <- glm(formula = Located ~ EEIDSession,
 summary(EcoModel4)
 anova(EcoModel4, test = 'Chisq')
 
+# no apparent bias in 'finding rates'
 
-1/((30/75)/(47/78))
+
+1/((31/74)/(49/78))
 # non-EEID sessions 1.5x more likely to be in ecology journals
 
-(19/75)/(6/78)
+(19/74)/(6/78)
 # EEID sessions 3.3x more likely to be in general bio journals
+
+# Pie charts
+
+# nicer ones for publication made in different software
+
+par(mfrow = c(1,2))
+
+SLID <- c(31, 19, 18, 6)
+SLNID<- c(49, 6, 0, 23)
+Labs1 <- c('Ecology Specific', 'General Biology', 'ID Specific', 'Other')
+Cols1 <- c('Green4', 'Blue3','Orange3','Grey3')
+Labs2 <- c('Ecology Specific', 'General Biology', 'Other')
+Cols2 <- c('Green4', 'Blue3','Grey3')
+pie(SLID, 
+    labels = Labs1,
+    col = Cols1,
+    main="ID Abstracts")
+pie(SLNID,
+    labels = Labs2,
+    col = Cols2,
+    main="Non-ID Abstracts")
+
+
+
+
 
